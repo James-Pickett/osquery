@@ -81,6 +81,8 @@ QueryData genBluetoothInfo(QueryContext& context) {
     return results;
   }
 
+  #pragma clang diagnostic pop
+
   cleanup = [&]() {
     CFRelease((__bridge CFTypeRef)document);
     CFBundleUnloadExecutable(bundle);
@@ -102,7 +104,8 @@ QueryData genBluetoothInfo(QueryContext& context) {
   NSString* chipset = [data objectForKey:@"controller_chipset"];
   NSString* vendorId = [data objectForKey:@"controller_vendorID"];
   NSString* firmwareVersion = [data objectForKey:@"controller_firmwareVersion"];
-  NSString* supportedServices = [data objectForKey:@"controller_supportedServices"];
+  NSString* supportedServices =
+      [data objectForKey:@"controller_supportedServices"];
 
   if (state) {
     if ([state isEqualToString:@"attrib_on"]) {

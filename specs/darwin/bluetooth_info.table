@@ -11,5 +11,4 @@ schema([
     Column("firmware_version", TEXT, "Text representing the currently loaded firmware on the Bluetooth radio."),
     Column("supported_services", TEXT, "A comma separated list of codes and strings representing supported Bluetooth services and profiles. Ref: https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles"),
 ])
-implementation("bluetooth@genBluetoothInfo")
-
+implementation("bluetooth_info@genBluetoothInfo")
