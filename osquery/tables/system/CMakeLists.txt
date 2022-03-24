@@ -109,6 +109,7 @@ function(generateOsqueryTablesSystemSystemtable)
       darwin/asl_utils.cpp
       darwin/authorizations.mm
       darwin/battery.mm
+      darwin/bluetooth_info.mm
       darwin/block_devices.cpp
       darwin/certificates.mm
       darwin/cpu_time.cpp
