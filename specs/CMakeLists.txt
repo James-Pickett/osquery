@@ -92,6 +92,7 @@ function(generateNativeTables)
     "darwin/authorization_mechanisms.table:macos"
     "darwin/authorizations.table:macos"
     "darwin/battery.table:macos"
+    "darwin/bluetooth_info.table:macos"
     "darwin/browser_plugins.table:macos"
     "darwin/crashes.table:macos"
     "darwin/cups_destinations.table:macos"

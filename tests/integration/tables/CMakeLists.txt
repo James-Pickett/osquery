@@ -215,6 +215,7 @@ function(generateTestsIntegrationTablesTestsTest)
       authorization_mechanisms.cpp
       authorizations.cpp
       battery.cpp
+      bluetooth_info.cpp
       browser_plugins.cpp
       certificates.cpp
       crashes.cpp

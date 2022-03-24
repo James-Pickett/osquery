@@ -1,0 +1,15 @@
+# osquery/tables/system/darwin/bluetooth_info.table
+
+table_name("bluetooth_info")
+description("Provides information about the internal bluetooth radio of a Mac.")
+schema([
+    Column("state", INTEGER, "1 if Bluetooth is enabled. Otherwise 0"),
+    Column("discoverable", INTEGER, "1 if The Bluetooth radio is in discovery mode and advertising itself to other devices. Otherwise 0."),
+    Column("address", TEXT, "The MAC address of the Bluetooth radio in colon delimited hexadecimal"),
+    Column("vendor_id", TEXT, "A hexadecimal number representing the Bluetooth Radio vendors' manufacturing ID. Ref: http://domoticx.com/bluetooth-company-identifiers/"),
+    Column("chipset", TEXT, "Text representing the underlying chipset used by the Bluetooth radio."),
+    Column("firmware_version", TEXT, "Text representing the currently loaded firmware on the Bluetooth radio."),
+    Column("supported_services", TEXT, "A comma separated list of codes and strings representing supported Bluetooth services and profiles. Ref: https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles"),
+])
+implementation("bluetooth@genBluetoothInfo")
+
